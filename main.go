@@ -198,7 +198,11 @@ func main() {
 		E100Plus, E100Minus, E100Mul, E100Div, E1004Z1, E1004Z2, E1004Z3, E1004Z4, E1004Z5, E1004Z6, E1004Z7, E1004Z8, E1004Z8, E1004Z9,
 	}
 
-	for i := 0; i < 100; i++ {
-		fmt.Println(fs[rand.Intn(len(fs))]())
+	for i := 0; i < 103; i++ {
+
+		for j := 0; j < 4; j++ {
+			fmt.Printf("%-30s", fs[rand.Intn(len(fs))]())
+		}
+		fmt.Println()
 	}
 }
